@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.2</ProjectVersion>
+    <ToolchainName>com.Atmel.ARMGCC.C</ToolchainName>
+    <ProjectGuid>{8ce7243b-7e52-42e0-97d5-8e241609ec1c}</ProjectGuid>
+    <avrdevice>ATSAMD21E17A</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>sam-ba_monitor (astudio)</AssemblyName>
+    <Name>sam-ba_monitor (astudio)</Name>
+    <RootNamespace>sam-ba_monitor (astudio)</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>1</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.21.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.atmelice</avrtool>
+    <avrtoolinterface>SWD</avrtoolinterface>
+    <com_atmel_avrdbg_tool_atmelice>
+      <ToolOptions>
+        <InterfaceProperties>
+          <SwdClock>2000000</SwdClock>
+        </InterfaceProperties>
+        <InterfaceName>SWD</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.atmelice</ToolType>
+      <ToolNumber>J41800006219</ToolNumber>
+      <ToolName>Atmel-ICE</ToolName>
+    </com_atmel_avrdbg_tool_atmelice>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <ArmGcc>
+  <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+  <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+  <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+  <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+  <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+  <armgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>NDEBUG</Value>
+    </ListValues>
+  </armgcc.compiler.symbols.DefSymbols>
+  <armgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL\samd21\include</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\CMSIS\Include</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL</Value>
+    </ListValues>
+  </armgcc.compiler.directories.IncludePaths>
+  <armgcc.compiler.optimization.level>Optimize for size (-Os)</armgcc.compiler.optimization.level>
+  <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </armgcc.linker.libraries.Libraries>
+  <armgcc.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>../cmsis/linkerScripts</Value>
+    </ListValues>
+  </armgcc.linker.libraries.LibrarySearchPaths>
+  <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
+  <armgcc.linker.miscellaneous.LinkerFlags>-Tsamd21e17a_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
+  <armgcc.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL\samd21\include</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\CMSIS\Include</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL</Value>
+    </ListValues>
+  </armgcc.preprocessingassembler.general.IncludePaths>
+</ArmGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <ArmGcc>
+  <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+  <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+  <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+  <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+  <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+  <armgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+    </ListValues>
+  </armgcc.compiler.symbols.DefSymbols>
+  <armgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL\samd21\include</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\CMSIS\Include</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL</Value>
+      <Value>../utils/preprocessor</Value>
+      <Value>../utils</Value>
+      <Value>../utils/interrupt</Value>
+      <Value>../drivers</Value>
+      <Value>../utils/cmsis/samd21/include/pio</Value>
+      <Value>../utils/cmsis/samd21/include/component</Value>
+      <Value>../utils/cmsis/samd21/include/instance</Value>
+      <Value>../utils/header_files</Value>
+      <Value>../utils/linker_scripts/samd21/gcc</Value>
+      <Value>../utils/cmsis/samd21/source</Value>
+      <Value>../utils/cmsis/samd21/source/gcc</Value>
+    </ListValues>
+  </armgcc.compiler.directories.IncludePaths>
+  <armgcc.compiler.optimization.level>Optimize for size (-Os)</armgcc.compiler.optimization.level>
+  <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcc.compiler.optimization.PrepareDataForGarbageCollection>True</armgcc.compiler.optimization.PrepareDataForGarbageCollection>
+  <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
+  <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcc.linker.general.UseNewlibNano>True</armgcc.linker.general.UseNewlibNano>
+  <armgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </armgcc.linker.libraries.Libraries>
+  <armgcc.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>../utils/linker_scripts/samd21/gcc</Value>
+    </ListValues>
+  </armgcc.linker.libraries.LibrarySearchPaths>
+  <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
+  <armgcc.linker.memorysettings.ExternalRAM />
+  <armgcc.linker.miscellaneous.LinkerFlags>-Tsamd21e17a_flash.ld -Wl,--section-start=.relocate=0x20000004</armgcc.linker.miscellaneous.LinkerFlags>
+  <armgcc.assembler.debugging.DebugLevel>Default (-g)</armgcc.assembler.debugging.DebugLevel>
+  <armgcc.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL\samd21\include</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\CMSIS\Include</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL</Value>
+    </ListValues>
+  </armgcc.preprocessingassembler.general.IncludePaths>
+  <armgcc.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcc.preprocessingassembler.debugging.DebugLevel>
+</ArmGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="drivers\cdc_enumerate.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\cdc_enumerate.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\uart_driver.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\uart_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sam_ba_monitor.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sam_ba_monitor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="usart_sam_ba.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="usart_sam_ba.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\component\ac.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\component\adc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\component\dac.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\component\dmac.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\component\dsu.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\component\eic.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\component\evsys.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\component\gclk.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\component\i2s.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\component\mtb.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\component\nvmctrl.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\component\pac.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\component\pm.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\component\port.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\component\rtc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\component\sercom.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\component\sysctrl.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\component\tc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\component\tcc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\component\usb.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\component\wdt.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\ac.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\adc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\dac.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\dmac.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\dsu.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\eic.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\evsys.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\gclk.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\i2s.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\mtb.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\nvmctrl.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\pac0.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\pac1.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\pac2.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\pm.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\port.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\rtc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\sercom0.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\sercom1.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\sercom2.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\sercom3.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\sercom4.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\sercom5.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\sysctrl.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\tc3.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\tc4.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\tc5.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\tc6.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\tc7.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\tcc0.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\tcc1.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\tcc2.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\usb.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\instance\wdt.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\pio\samd21e15a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\pio\samd21e16a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\pio\samd21e17a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\pio\samd21e18a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\pio\samd21g15a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\pio\samd21g16a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\pio\samd21g17a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\pio\samd21g18a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\pio\samd21j15a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\pio\samd21j16a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\pio\samd21j17a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\pio\samd21j18a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\samd21.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\samd21e15a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\samd21e16a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\samd21e17a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\samd21e18a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\samd21g15a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\samd21g16a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\samd21g17a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\samd21g18a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\samd21j15a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\samd21j16a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\samd21j17a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\include\samd21j18a.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\source\gcc\startup_samd21.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\source\system_samd21.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\cmsis\samd21\source\system_samd21.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\compiler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\header_files\io.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\interrupt.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\interrupt\interrupt_sam_nvic.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\interrupt\interrupt_sam_nvic.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\preprocessor\mrecursion.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\preprocessor\mrepeat.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\preprocessor\preprocessor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\preprocessor\stringz.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\preprocessor\tpaste.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utils\status_codes.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="drivers\" />
+    <Folder Include="utils\" />
+    <Folder Include="utils\cmsis\" />
+    <Folder Include="utils\cmsis\samd21\" />
+    <Folder Include="utils\cmsis\samd21\include\" />
+    <Folder Include="utils\cmsis\samd21\include\component\" />
+    <Folder Include="utils\cmsis\samd21\include\instance\" />
+    <Folder Include="utils\cmsis\samd21\include\pio\" />
+    <Folder Include="utils\cmsis\samd21\source\" />
+    <Folder Include="utils\cmsis\samd21\source\gcc\" />
+    <Folder Include="utils\header_files\" />
+    <Folder Include="utils\interrupt\" />
+    <Folder Include="utils\linker_scripts\" />
+    <Folder Include="utils\linker_scripts\samd21\" />
+    <Folder Include="utils\linker_scripts\samd21\gcc\" />
+    <Folder Include="utils\preprocessor\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="utils\linker_scripts\samd21\gcc\samd21e17a_flash.ld">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>

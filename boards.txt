@@ -1,0 +1,56 @@
+#wino_dbg.name=WinoBOARD (DEBUG port or external FTDI)
+#wino_dbg.vid.0=0x03eb
+#wino_dbg.pid.0=0x6124
+#wino_dbg.upload.tool=bossac
+#wino_dbg.upload.protocol=sam-ba
+#wino_dbg.upload.maximum_size=131072
+#wino_dbg.upload.use_1200bps_touch=false
+#wino_dbg.upload.wait_for_upload_port=false
+#wino_dbg.upload.native_usb=false
+#wino_dbg.build.mcu=cortex-m0plus
+#wino_dbg.build.f_cpu=48000000L
+#wino_dbg.build.usb_product="WinoBOARD"
+#wino_dbg.build.usb_manufacturer="IAN"
+#wino_dbg.build.board=SAMD_WINO
+#wino_dbg.build.core=arduino
+
+# comment first line to run on internal oscillator or 2nd to run on external crystal
+#wino_dbg.build.extra_flags=-D__SAMD21E17A__ {build.usb_flags}
+##wino_dbg.build.extra_flags=-D__SAMD21E17A__ {build.usb_flags} -DINT_OSC
+
+#wino_dbg.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+#wino_dbg.build.variant=wino
+#wino_dbg.build.variant_system_lib=
+#wino_dbg.build.vid=0x03eb
+#wino_dbg.build.pid=0x6124
+
+
+
+
+wino.name=WinoBOARD [USB]
+wino.vid.0=0x03eb
+wino.pid.0=0x6124
+wino.upload.tool=bossac
+wino.upload.protocol=sam-ba
+wino.upload.maximum_size=131072
+wino.upload.use_1200bps_touch=true
+wino.upload.wait_for_upload_port=true
+wino.upload.native_usb=true
+wino.build.mcu=cortex-m0plus
+wino.build.f_cpu=48000000L
+wino.build.usb_product="WinoBOARD"
+wino.build.usb_manufacturer="IAN"
+wino.build.board=SAMD_WINO
+wino.build.core=arduino
+
+# do the same here
+wino.build.extra_flags=-D__SAMD21E17A__ {build.usb_flags}
+#wino.build.extra_flags=-D__SAMD21E17A__ {build.usb_flags} -DINT_OSC
+
+wino.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+wino.build.variant=wino
+wino.build.variant_system_lib=
+wino.build.vid=0x03eb
+wino.build.pid=0x6124
+
+

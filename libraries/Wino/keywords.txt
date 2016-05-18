@@ -1,0 +1,51 @@
+#######################################
+# WIFI-Library
+#######################################
+wifi	KEYWORD1
+
+start	KEYWORD2
+join	KEYWORD2
+connect	KEYWORD2
+on	KEYWORD2
+wait	KEYWORD2
+mux	KEYWORD2
+update	KEYWORD2
+refresh	KEYWORD2
+getStatus	KEYWORD2
+restart	KEYWORD2
+info	KEYWORD2
+setMode	KEYWORD2
+off	KEYWORD2
+list	KEYWORD2
+leave	KEYWORD2
+config	KEYWORD2
+getDevices	KEYWORD2
+getipStatus	KEYWORD2
+getip	KEYWORD2
+disconnect	KEYWORD2
+setTCPServerTimeout	KEYWORD2
+stop	KEYWORD2
+write	KEYWORD2
+writeln	KEYWORD2
+read	KEYWORD2
+readln	KEYWORD2
+
+#######################################
+# Widget Library
+#######################################
+widget	KEYWORD1
+
+addSlider	KEYWORD2
+addSwitch	KEYWORD2
+addStatus	KEYWORD2
+start	KEYWORD2
+refresh	KEYWORD2
+remove	KEYWORD2
+read	KEYWORD2
+write	KEYWORD2
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
