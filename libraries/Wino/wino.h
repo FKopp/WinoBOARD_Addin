@@ -151,6 +151,13 @@ class WiFiESP {
     String getip(void);
     
     /**
+     * Get the MAC address of ESP8266. 
+     *
+     * @return the MAC list. 
+     */
+    String getmac(void);
+    
+    /**
      * max_enable=1 Enable IP MUX(multiple connection mode). 
      * max_enable=0 Disable IP MUX(single connection mode). 
      *

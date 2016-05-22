@@ -192,6 +192,20 @@ String WiFiESP::getip(void)
     return list;
 }
 
+String WiFiESP::getmac(void)
+{
+    String list;
+    eATCIFSR(list);
+  
+  //Station MAC output
+  String  mac = list;
+  int start = mac.indexOf("STAMAC") + 8;
+  int ende = mac.indexOf("\"", start);
+  list = mac.substring(start, ende);
+  
+    return list;
+}
+
 bool WiFiESP::mux(uint8_t mux_enable)
 {
     if(mux_enable==0)
