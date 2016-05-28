@@ -67,7 +67,7 @@ class WiFiESP {
      * 2 = modem-sleep mode
      */
      
-       bool sleep(uint8_t timeout);
+       bool sleep(uint32_t timeout);
 
     /** 
      * sets the ESP into deepsleep for a certain time [ms]
@@ -385,7 +385,7 @@ class WiFiESP {
     
     bool qATCWMODE(uint8_t *mode);
     bool sATCWMODE(uint8_t mode);
-    bool sATGSLP(uint8_t timeout);
+    bool sATGSLP(uint32_t timeout);
     bool sATSLEEP(uint8_t mode);
     bool sATCWJAP(String ssid, String pwd);
     bool eATCWLAP(String &list);
