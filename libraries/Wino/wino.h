@@ -58,7 +58,7 @@ class WiFiESP {
      * @retval true - alive.
      * @retval false - dead.
      */
-       void sleepmode(uint8_t mode);
+       bool sleepmode(uint8_t mode);
 
     /** 
      * sets the Sleepmode of the ESP
@@ -67,7 +67,7 @@ class WiFiESP {
      * 2 = modem-sleep mode
      */
      
-       void sleep(uint8_t timeout);
+       bool sleep(uint8_t timeout);
 
     /** 
      * sets the ESP into deepsleep for a certain time [ms]
