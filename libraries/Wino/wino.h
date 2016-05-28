@@ -58,6 +58,18 @@ class WiFiESP {
      * @retval true - alive.
      * @retval false - dead.
      */
+       void sleepmode(mode);
+
+    /** 
+     * sets the Sleepmode of the ESP
+     */
+     
+            void sleep(timeout);
+
+    /** 
+     * sets the ESP into deepsleep for a certain time
+     */
+     
     bool getStatus(void);
     
     /**
