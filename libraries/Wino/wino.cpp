@@ -219,6 +219,12 @@ bool WiFiESP::setTCPServerTimeout(uint32_t timeout)
     return sATCIPSTO(timeout);
 }
 
+bool WiFiESP::sleep(uint32_t timeout)
+{
+    //return sATCIPSTO(timeout);
+}
+
+
 bool WiFiESP::start(uint32_t port)
 {
     if (sATCIPSERVER(1, port)) {
