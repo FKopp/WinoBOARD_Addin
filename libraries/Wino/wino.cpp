@@ -221,9 +221,12 @@ bool WiFiESP::setTCPServerTimeout(uint32_t timeout)
 
 bool WiFiESP::sleep(uint32_t timeout)
 {
-    //return sATCIPSTO(timeout);
+    return sATGSLP(timeout);
 }
-
+bool WiFiESP::sleepmode(uint32_t mode)
+{
+    return sATSLEEP(timeout);
+}
 
 bool WiFiESP::start(uint32_t port)
 {
@@ -745,6 +748,29 @@ bool WiFiESP::sATCIPSTO(uint32_t timeout)
     rx_empty();
     m_puart->print("AT+CIPSTO=");
     m_puart->println(timeout);
+    return recvFind("OK");
+}
+
+bool WiFiESP::sATGSLP(uint32_t timeout)
+{
+    rx_empty();
+    m_puart->print("AT+GSLP=");
+    m_puart->println(timeout);
+    return recvFind("OK");
+}
+
+bool WiFiESP::sATSLEEP(uint32_t mode)
+{
+    rx_empty();
+    m_puart->print("AT+SLEEP=");
+	if (mode == 1){
+		m_puart->println(1);
+	} elseif (mode == 2){
+		m_puart->println(2);
+	} else {
+		m_puart->println(0);
+	}
+    
     return recvFind("OK");
 }
 
