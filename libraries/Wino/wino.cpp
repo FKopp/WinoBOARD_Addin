@@ -765,11 +765,11 @@ bool WiFiESP::sATSLEEP(uint8_t mode)
     m_puart->print("AT+SLEEP=");
 	if (mode == 1){
 		m_puart->println(1);
-	} elseif (mode == 2){
+	} if (mode == 2){
 		m_puart->println(2);
-	} else {
+	} if (mode == 0){
 		m_puart->println(0);
-	}
+	} else { return false}
     
     return recvFind("OK");
 }
