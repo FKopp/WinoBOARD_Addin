@@ -6,6 +6,8 @@ wifi	KEYWORD1
 start	KEYWORD2
 join	KEYWORD2
 connect	KEYWORD2
+sleep	KEYWORD2
+sleepmode	KEYWORD2
 on	KEYWORD2
 wait	KEYWORD2
 mux	KEYWORD2
