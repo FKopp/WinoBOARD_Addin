@@ -208,7 +208,7 @@ String WiFiESP::getmac(void)
 
 bool WiFiESP::mux(uint8_t mux_enable)
 {
-    if(mux_enable==0)
+    if(mux_enable==1)
         return sATCIPMUX(1);
     else
         return sATCIPMUX(0);
@@ -653,7 +653,7 @@ bool WiFiESP::connect(uint8_t mux_id, String protocol, String addr, uint32_t por
 bool WiFiESP::sATCIPSENDSingle(const uint8_t *buffer, uint32_t len)
 {
     rx_empty();
-    m_puart->print("AT+CIPSEND=0,");
+    m_puart->print("AT+CIPSEND=");
     m_puart->println(len);
     if (recvFind(">", 5000)) {
         rx_empty();
