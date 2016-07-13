@@ -24,6 +24,7 @@ config	KEYWORD2
 getDevices	KEYWORD2
 getipStatus	KEYWORD2
 getip	KEYWORD2
+getmac KEYWORD2
 disconnect	KEYWORD2
 setTCPServerTimeout	KEYWORD2
 stop	KEYWORD2
