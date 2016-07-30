@@ -58,6 +58,21 @@ class WiFiESP {
      * @retval true - alive.
      * @retval false - dead.
      */
+       bool sleepmode(uint8_t mode);
+
+    /** 
+     * sets the Sleepmode of the ESP
+     * 0 = disable sleep mode
+     * 1 = light-sleep mode
+     * 2 = modem-sleep mode
+     */
+     
+       bool sleep(uint32_t timeout);
+
+    /** 
+     * sets the ESP into deepsleep for a certain time [ms]
+     */
+     
     bool getStatus(void);
     
     /**
@@ -149,6 +164,13 @@ class WiFiESP {
      * @return the IP list. 
      */
     String getip(void);
+    
+    /**
+     * Get the MAC address of ESP8266. 
+     *
+     * @return the MAC list. 
+     */
+    String getmac(void);
     
     /**
      * max_enable=1 Enable IP MUX(multiple connection mode). 
@@ -363,6 +385,8 @@ class WiFiESP {
     
     bool qATCWMODE(uint8_t *mode);
     bool sATCWMODE(uint8_t mode);
+    bool sATGSLP(uint32_t timeout);
+    bool sATSLEEP(uint8_t mode);
     bool sATCWJAP(String ssid, String pwd);
     bool eATCWLAP(String &list);
     bool eATCWQAP(void);

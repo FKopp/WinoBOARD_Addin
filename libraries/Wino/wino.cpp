@@ -192,9 +192,23 @@ String WiFiESP::getip(void)
     return list;
 }
 
+String WiFiESP::getmac(void)
+{
+    String list;
+    eATCIFSR(list);
+  
+  //Station MAC output
+  String  mac = list;
+  int start = mac.indexOf("STAMAC") + 8;
+  int ende = mac.indexOf("\"", start);
+  list = mac.substring(start, ende);
+  
+    return list;
+}
+
 bool WiFiESP::mux(uint8_t mux_enable)
 {
-    if(mux_enable==0)
+    if(mux_enable==1)
         return sATCIPMUX(1);
     else
         return sATCIPMUX(0);
@@ -203,6 +217,15 @@ bool WiFiESP::mux(uint8_t mux_enable)
 bool WiFiESP::setTCPServerTimeout(uint32_t timeout)
 {
     return sATCIPSTO(timeout);
+}
+
+bool WiFiESP::sleep(uint32_t timeout)
+{
+    return sATGSLP(timeout);
+}
+bool WiFiESP::sleepmode(uint8_t mode)
+{
+    return sATSLEEP(mode);
 }
 
 bool WiFiESP::start(uint32_t port)
@@ -725,6 +748,29 @@ bool WiFiESP::sATCIPSTO(uint32_t timeout)
     rx_empty();
     m_puart->print("AT+CIPSTO=");
     m_puart->println(timeout);
+    return recvFind("OK");
+}
+
+bool WiFiESP::sATGSLP(uint32_t timeout)
+{
+    rx_empty();
+    m_puart->print("AT+GSLP=");
+    m_puart->println(timeout);
+    return recvFind("OK");
+}
+
+bool WiFiESP::sATSLEEP(uint8_t mode)
+{
+    rx_empty();
+    m_puart->print("AT+SLEEP=");
+	if (mode == 1){
+		m_puart->println(1);
+	} if (mode == 2){
+		m_puart->println(2);
+	} if (mode == 0){
+		m_puart->println(0);
+	} else { return false;}
+    
     return recvFind("OK");
 }
 
