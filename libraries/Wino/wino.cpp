@@ -18,15 +18,15 @@
         {\
             if (LOG_OUTPUT_DEBUG_PREFIX)\
             {\
-                Serial.print("[LOG Debug: ");\
-                Serial.print((const char*)__FILE__);\
-                Serial.print(",");\
-                Serial.print((unsigned int)__LINE__);\
-                Serial.print(",");\
-                Serial.print((const char*)__FUNCTION__);\
-                Serial.print("] ");\
+                SerialUSB.print("[LOG Debug: ");\
+                SerialUSB.print((const char*)__FILE__);\
+                SerialUSB.print(",");\
+                SerialUSB.print((unsigned int)__LINE__);\
+                SerialUSB.print(",");\
+                SerialUSB.print((const char*)__FUNCTION__);\
+                SerialUSB.print("] ");\
             }\
-            Serial.print(arg);\
+            SerialUSB.print(arg);\
         }\
     } while(0)
 
