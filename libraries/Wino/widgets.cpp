@@ -113,7 +113,7 @@ bool WidgetClass::refresh() {
 				else {return false;}
 			}
 		}
-		wifi.writeln(answer);
+		wifi.writeln(0, answer);
 	}
 	if (data.indexOf("setdata(") == 0){
 		int Id = 0;
