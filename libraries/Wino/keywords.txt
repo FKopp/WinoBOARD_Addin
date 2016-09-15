@@ -46,7 +46,10 @@ refresh	KEYWORD2
 remove	KEYWORD2
 read	KEYWORD2
 write	KEYWORD2
-
+#######################################
+# OLED Library
+#######################################
+display	KEYWORD1
 
 #######################################
 # Constants (LITERAL1)
