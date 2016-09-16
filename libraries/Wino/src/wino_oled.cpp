@@ -30,26 +30,3 @@
         }\
     } while(0)
 		
-bool OLED_CLASS::init(void)
-{
-	//Adafruit_SSD1306 display(OLED_RESET);
-	//display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
-}   
-	
-bool OLED_CLASS::clear(void)
-{
-  /*  for (int16_t i=0; i<display.width(); i+=4) {
-    display.drawLine(0, display.height()-1, i, 0, WHITE);
-    display.display();
-    delay(1);
-  }
-  for (int16_t i=display.height()-1; i>=0; i-=4) {
-    display.drawLine(0, display.height()-1, display.width()-1, i, WHITE);
-    display.display();
-    delay(1);
-  }
-  delay(250);  */
-}   
-//Adafruit_SSD1306 display(A8);
-
-//display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
