@@ -50,7 +50,7 @@ write	KEYWORD2
 # OLED Library
 #######################################
 display	KEYWORD1
-
+writebuffer	KEYWORD2
 #######################################
 # Constants (LITERAL1)
 #######################################
