@@ -158,7 +158,7 @@ class Adafruit_SSD1306 : public Adafruit_GFX {
   void start(void); //added for WinoBOARD
    
   void ssd1306_command(uint8_t c);
-
+  void writebuffer(uint8_t picture[128*64/8]);
   void clearDisplay(void);
   void invertDisplay(uint8_t i);
   void display();
