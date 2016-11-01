@@ -154,6 +154,11 @@ bool WiFiESP::join(String ssid, String pwd)
     return sATCWJAP(ssid, pwd);
 }
 
+bool WiFiESP::setip(String ip)
+{
+    return eATCIPSTA(ip);
+}
+
 bool WiFiESP::leave(void)
 {
     return eATCWQAP();
@@ -796,6 +801,21 @@ bool WiFiESP::wait(uint32_t timeout)
 	String data;
     data = recvString("WIFI GOT IP", timeout);
     if (data.indexOf("WIFI GOT IP") != -1) {
+        return true;
+    }
+    return false;
+}
+bool WiFiESP::eATCIPSTA(String ip)
+{
+	String data;
+    rx_empty();
+    m_puart->print("AT+CIPSTA=");
+	m_puart->print("\"");
+	m_puart->print(ip);
+	m_puart->println("\"");
+	
+    data = recvString("OK", "ERROR", 5000);
+    if (data.indexOf("OK") != -1) {
         return true;
     }
     return false;
