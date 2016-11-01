@@ -32,6 +32,7 @@ write	KEYWORD2
 writeln	KEYWORD2
 read	KEYWORD2
 readln	KEYWORD2
+setip	KEYWORD2
 
 #######################################
 # Widget Library
