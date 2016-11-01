@@ -163,8 +163,16 @@ class WiFiESP {
      *
      * @return the IP list. 
      */
+	
     String getip(void);
-    
+	
+     /**
+     * Set the IP address of ESP8266. 
+     *
+     * @return true/false 
+     */
+    bool setip(String ip);
+	
     /**
      * Get the MAC address of ESP8266. 
      *
@@ -392,7 +400,8 @@ class WiFiESP {
     bool eATCWQAP(void);
     bool sATCWSAP(String ssid, String pwd, uint8_t chl, uint8_t ecn);
     bool eATCWLIF(String &list);
-    
+    bool eATCIPSTA(String ip);
+	
     bool eATCIPSTATUS(String &list);
     bool sATCIPSTARTMultiple(uint8_t mux_id, String type, String addr, uint32_t port);
     bool sATCIPSENDSingle(const uint8_t *buffer, uint32_t len);
