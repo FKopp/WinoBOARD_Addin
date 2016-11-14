@@ -47,7 +47,9 @@ extern "C"{
 #include "sam.h"
 #include "power.h" //Added power saving functions
 #include "wiring_constants.h"
-
+#include "winoboard.h" //WinoBOARD specific functions
+  
+  
 #define clockCyclesPerMicrosecond() ( SystemCoreClock / 1000000L )
 #define clockCyclesToMicroseconds(a) ( ((a) * 1000L) / (SystemCoreClock / 1000L) )
 #define microsecondsToClockCycles(a) ( (a) * (SystemCoreClock / 1000000L) )
