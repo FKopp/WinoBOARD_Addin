@@ -106,6 +106,8 @@ void attachInterrupt(uint32_t pin, voidFuncPtr callback, uint32_t mode)
 
   // Enable the interrupt
   EIC->INTENSET.reg = EIC_INTENSET_EXTINT(1 << in);
+  // Enable wakeup for the interrupt
+  EIC->WAKEUP.reg = EIC_INTENSET_EXTINT(1 << in);
 }
 
 /*
