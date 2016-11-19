@@ -127,10 +127,10 @@ bool WiFiESP::setMode(uint8_t mode)
                     }
                     break;
             case 3: off();
-                    delay(100);
+                    //delay(100);
                     pinMode(13,OUTPUT);
                     digitalWrite(13,LOW);
-                    delay(100);
+                    //delay(100);
                     #ifdef __SAMD21G18A__
                         #define WIFI_EN_PIN 14
                     #endif
