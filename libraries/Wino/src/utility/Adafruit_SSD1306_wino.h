@@ -46,7 +46,7 @@ This code was slightly modified for the WinoBOARD --- www.wino-board.com
 #endif
 
 #include <SPI.h>
-#include <Adafruit_GFX.h>
+#include <utility/Adafruit_GFX.h>
 
 #define BLACK 0
 #define WHITE 1
